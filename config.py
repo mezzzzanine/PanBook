@@ -4,6 +4,7 @@ INFO = """Hello, I'm PanBook Bot. With my help, you can find a book to your liki
 
 Use these commands to control me:
 
-/charts - Get a list of the most popular books of this week
+/charts - Get a list of the most popular books
 /search - Find book
 /help - Get help"""
+
