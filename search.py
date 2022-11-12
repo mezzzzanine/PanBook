@@ -1,13 +1,9 @@
-import sqlite3
-
+from database_control import Dbcontrol
 
 class Search:
-    def search(self, b_name):
-        db = sqlite3.connect('server.db')
-        sql = db.cursor()
-        sql.execute(f"SELECT id FROM server WHERE name = '{b_name}'")
-        return (sql.fetchone()[1])
+    def __init__(self):
+        self.library = Dbcontrol()
 
-        db.commit()
-        db.close()
+    def find_book(self, book_name):
+        self.library.read(book_name)
 

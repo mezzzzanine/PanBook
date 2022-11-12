@@ -1,9 +1,9 @@
-import sqlite3
+from database_control import Dbcontrol
+
 
 class Charts:
-    def get_charts(self):
-        db = sqlite3.connect('server.db')
-        sql = db.cursor()
-        sql.execute("""
-SELECT * FROM books
-SORT BY downloads """)
+    def __init__(self):
+        self.library = Dbcontrol()
+
+    def charts(self):
+        return self.library.get_charts()
